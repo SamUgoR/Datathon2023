@@ -1,1 +1,12 @@
-Flask==0.12
+beautifulsoup4==4.11.0        # For web scraping
+requests==2.27.0              # For making HTTP requests
+pandas==1.4.0                 # Data manipulation
+numpy==1.22.0                 # Numerical operations
+scikit-learn==1.0.1           # Machine learning library
+matplotlib==3.5.0             # Data visualization
+seaborn==0.12.0               # Data visualization
+tensorflow==2.8.0             # Deep learning framework
+keras==2.8.0                  # High-level neural networks API
+jupyter==1.0.1                # Jupyter Notebook
+maplibre==0.15.0              # Interactive maps for web applications
+
