@@ -24,8 +24,6 @@ for year in summary['Year'].unique():
     year_data = summary[summary['Year'] == year]
     heat_data = year_data[['Latitude', 'Longitude', 'Value']].values.tolist()
     
-    # Add heatmap layer to the map for the specific year
-    HeatMap(heat_data, radius=50, name=str(year)).add_to(m)
 
     # Add a circle marker for each organization in the year
     for _, row in year_data.iterrows():
@@ -42,4 +40,4 @@ for year in summary['Year'].unique():
 folium.LayerControl().add_to(m)
 
 # Save map to an HTML file
-m.save('heatmap_original_points.html')
+m.save('map_2050Today.html')
