@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc177190576906daaede6276b967ca26 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_cc177190576906daaede6276b967ca26" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cc177190576906daaede6276b967ca26 = L.map(
+                "map_cc177190576906daaede6276b967ca26",
+                {
+                    center: [46.2044, 6.1432],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1529bc4d733c4232bf3f25f1c7673cbb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+            var heat_map_608a104c38b9de2913c510a72b6c331c = L.heatLayer(
+                [[46.2022496, 6.1416388, 91.0], [46.21318, 6.11124, 840.0], [46.2138171, 6.1460309, 57.0], [46.2138171, 6.1460309, 42.0], [46.2156717, 6.1322563, 191.0], [46.2167065, 6.1480928, 44.0], [46.21934176011838, 6.134093111889695, 396.0], [46.2197449, 6.1367197, 88.0], [46.2200491, 6.143868, 26269.0], [46.2200491, 6.143868, 3392.0], [46.2200491, 6.143868, 38.0], [46.2200491, 6.143868, 29.0], [46.2200491, 6.143868, 6.0], [46.22092633253714, 6.139227211889732, 323.0], [46.22092633253714, 6.139227211889732, 364.0], [46.22092633253714, 6.139227211889732, 4199.0], [46.2218286, 6.137159, 101.0], [46.2224013, 6.1380736, 3657.0], [46.222618, 6.1329042, 257.0], [46.222618, 6.1329042, 1516.0], [46.2255721, 6.1311095, 80.0], [46.225705500000004, 6.140806439130429, 143.0], [46.2261633, 6.1239301, 264.0], [46.228251549999996, 6.1424633241700475, 156.0], [46.2286278, 6.1346858, 8122.0], [46.2299159, 6.1286488, 5782.0], [46.2299159, 6.1286488, 4132.0], [46.2303302, 6.1222181, 59.0], [46.2330338, 6.0556926, 1718.0]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 50}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+            var circle_marker_27ebfcc24f52bc2e54cd816072b8d46c = L.circleMarker(
+                [46.2022496, 6.1416388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_983f5920f3dc9dcfa5a0d1e040f0e1c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d98aa12be647ded78962b6f2d4c4ecba = $(`<div id="html_d98aa12be647ded78962b6f2d4c4ecba" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: fipoi foundation for buildings for international organisations<br>Emission in kg of CO2/year: 91.0</div>`)[0];
+                popup_983f5920f3dc9dcfa5a0d1e040f0e1c4.setContent(html_d98aa12be647ded78962b6f2d4c4ecba);
+            
+        
+
+        circle_marker_27ebfcc24f52bc2e54cd816072b8d46c.bindPopup(popup_983f5920f3dc9dcfa5a0d1e040f0e1c4)
+        ;
+
+        
+    
+    
+            var circle_marker_dc0be67cba019d22749659797d69ef29 = L.circleMarker(
+                [46.21318, 6.11124],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e075e4cf4633288066a9dbafb7fa719a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23807d1698da09f14d32b46817ecdbad = $(`<div id="html_23807d1698da09f14d32b46817ecdbad" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: united nations environment programme geneva office<br>Emission in kg of CO2/year: 840.0</div>`)[0];
+                popup_e075e4cf4633288066a9dbafb7fa719a.setContent(html_23807d1698da09f14d32b46817ecdbad);
+            
+        
+
+        circle_marker_dc0be67cba019d22749659797d69ef29.bindPopup(popup_e075e4cf4633288066a9dbafb7fa719a)
+        ;
+
+        
+    
+    
+            var circle_marker_b8417c0e8ab41e48e8d8688fe10f4974 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d5805074096cd1696f3bab1153865d7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee61a1879943fb800e610937768b8f5f = $(`<div id="html_ee61a1879943fb800e610937768b8f5f" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of norway 2<br>Emission in kg of CO2/year: 57.0</div>`)[0];
+                popup_d5805074096cd1696f3bab1153865d7a.setContent(html_ee61a1879943fb800e610937768b8f5f);
+            
+        
+
+        circle_marker_b8417c0e8ab41e48e8d8688fe10f4974.bindPopup(popup_d5805074096cd1696f3bab1153865d7a)
+        ;
+
+        
+    
+    
+            var circle_marker_04a8a21bca9e37ebe2157a9f723af321 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_7b5eba09cde52bd909cd1ac887f86562 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3582661f52c34e3761639959c066cb1f = $(`<div id="html_3582661f52c34e3761639959c066cb1f" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of portugal<br>Emission in kg of CO2/year: 42.0</div>`)[0];
+                popup_7b5eba09cde52bd909cd1ac887f86562.setContent(html_3582661f52c34e3761639959c066cb1f);
+            
+        
+
+        circle_marker_04a8a21bca9e37ebe2157a9f723af321.bindPopup(popup_7b5eba09cde52bd909cd1ac887f86562)
+        ;
+
+        
+    
+    
+            var circle_marker_52c16a28398bc15514c54edb2b8fd458 = L.circleMarker(
+                [46.2156717, 6.1322563],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_cac999d2eaeabc174fdc65c4a98afdee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1cabde830a4023810758321e1bb8c594 = $(`<div id="html_1cabde830a4023810758321e1bb8c594" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent delegation of the european union<br>Emission in kg of CO2/year: 191.0</div>`)[0];
+                popup_cac999d2eaeabc174fdc65c4a98afdee.setContent(html_1cabde830a4023810758321e1bb8c594);
+            
+        
+
+        circle_marker_52c16a28398bc15514c54edb2b8fd458.bindPopup(popup_cac999d2eaeabc174fdc65c4a98afdee)
+        ;
+
+        
+    
+    
+            var circle_marker_4eb2c56a334e7c1170c6a6d5322810af = L.circleMarker(
+                [46.2167065, 6.1480928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_19ddb34ecf6ab2a3720eb87f704a6f4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bcb7d146463b9b230b15b1632768aa1a = $(`<div id="html_bcb7d146463b9b230b15b1632768aa1a" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the republic of rwanda<br>Emission in kg of CO2/year: 44.0</div>`)[0];
+                popup_19ddb34ecf6ab2a3720eb87f704a6f4c.setContent(html_bcb7d146463b9b230b15b1632768aa1a);
+            
+        
+
+        circle_marker_4eb2c56a334e7c1170c6a6d5322810af.bindPopup(popup_19ddb34ecf6ab2a3720eb87f704a6f4c)
+        ;
+
+        
+    
+    
+            var circle_marker_426296e56b160989f670af9de62259b1 = L.circleMarker(
+                [46.21934176011838, 6.134093111889695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_8ef5f8c2bc1a78ab74af44d1b9cf4ce0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99af9d4348ecea359884e26110901c39 = $(`<div id="html_99af9d4348ecea359884e26110901c39" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: nrc norwegian refugee council geneva office idmc internal displacement monitoring centre<br>Emission in kg of CO2/year: 396.0</div>`)[0];
+                popup_8ef5f8c2bc1a78ab74af44d1b9cf4ce0.setContent(html_99af9d4348ecea359884e26110901c39);
+            
+        
+
+        circle_marker_426296e56b160989f670af9de62259b1.bindPopup(popup_8ef5f8c2bc1a78ab74af44d1b9cf4ce0)
+        ;
+
+        
+    
+    
+            var circle_marker_1b6e59120ae7af709a42312d41af4c97 = L.circleMarker(
+                [46.2197449, 6.1367197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_159f79a89f547c387efccc6497402304 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27d087d39dc12631fe83a870deecc445 = $(`<div id="html_27d087d39dc12631fe83a870deecc445" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of mexico<br>Emission in kg of CO2/year: 88.0</div>`)[0];
+                popup_159f79a89f547c387efccc6497402304.setContent(html_27d087d39dc12631fe83a870deecc445);
+            
+        
+
+        circle_marker_1b6e59120ae7af709a42312d41af4c97.bindPopup(popup_159f79a89f547c387efccc6497402304)
+        ;
+
+        
+    
+    
+            var circle_marker_dbe06fe34ea7af86cbcf4430e25c158c = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_78ac43e15081c377fc8e5e20ba81b546 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55eea19b52badecef68cf42abe246140 = $(`<div id="html_55eea19b52badecef68cf42abe246140" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: ioc the international olympic committee<br>Emission in kg of CO2/year: 26269.0</div>`)[0];
+                popup_78ac43e15081c377fc8e5e20ba81b546.setContent(html_55eea19b52badecef68cf42abe246140);
+            
+        
+
+        circle_marker_dbe06fe34ea7af86cbcf4430e25c158c.bindPopup(popup_78ac43e15081c377fc8e5e20ba81b546)
+        ;
+
+        
+    
+    
+            var circle_marker_0d55dff81276a99ccd908996b106900a = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_77ce2a216811370c7489b66e58ca169f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b127c268881e413192bf7d7025ceb8b4 = $(`<div id="html_b127c268881e413192bf7d7025ceb8b4" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: office of the united nations in geneva<br>Emission in kg of CO2/year: 3392.0</div>`)[0];
+                popup_77ce2a216811370c7489b66e58ca169f.setContent(html_b127c268881e413192bf7d7025ceb8b4);
+            
+        
+
+        circle_marker_0d55dff81276a99ccd908996b106900a.bindPopup(popup_77ce2a216811370c7489b66e58ca169f)
+        ;
+
+        
+    
+    
+            var circle_marker_d3fd4754ed5512f8663e3b844cee1596 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_81e7e8e74ae23f5d1c381cf9fd040ea3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_817e03aa83046b4c086f3cf19d86c484 = $(`<div id="html_817e03aa83046b4c086f3cf19d86c484" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of finland<br>Emission in kg of CO2/year: 38.0</div>`)[0];
+                popup_81e7e8e74ae23f5d1c381cf9fd040ea3.setContent(html_817e03aa83046b4c086f3cf19d86c484);
+            
+        
+
+        circle_marker_d3fd4754ed5512f8663e3b844cee1596.bindPopup(popup_81e7e8e74ae23f5d1c381cf9fd040ea3)
+        ;
+
+        
+    
+    
+            var circle_marker_54ef1370b75cdb8452495c82e43c09cc = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_7144128688456eb450ec4ffb3cac2a01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c8b786c2ac74723fed6b9e987e096c8 = $(`<div id="html_1c8b786c2ac74723fed6b9e987e096c8" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the fiji republic<br>Emission in kg of CO2/year: 29.0</div>`)[0];
+                popup_7144128688456eb450ec4ffb3cac2a01.setContent(html_1c8b786c2ac74723fed6b9e987e096c8);
+            
+        
+
+        circle_marker_54ef1370b75cdb8452495c82e43c09cc.bindPopup(popup_7144128688456eb450ec4ffb3cac2a01)
+        ;
+
+        
+    
+    
+            var circle_marker_ad762cd0d3c9c5eca1fd5105a52a2021 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d05eb162824ee08849f01e7e9513731b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c930bb69f1e336c7bfa051d07d1cae9 = $(`<div id="html_5c930bb69f1e336c7bfa051d07d1cae9" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the republic of costa rica<br>Emission in kg of CO2/year: 6.0</div>`)[0];
+                popup_d05eb162824ee08849f01e7e9513731b.setContent(html_5c930bb69f1e336c7bfa051d07d1cae9);
+            
+        
+
+        circle_marker_ad762cd0d3c9c5eca1fd5105a52a2021.bindPopup(popup_d05eb162824ee08849f01e7e9513731b)
+        ;
+
+        
+    
+    
+            var circle_marker_b89a1fe57304affed70a14315d5e65a1 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_cdb68dab054db01709466e5dcc14cb58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b6dbbb82be36892246fbbeed16449f6 = $(`<div id="html_0b6dbbb82be36892246fbbeed16449f6" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the federal republic of germany<br>Emission in kg of CO2/year: 323.0</div>`)[0];
+                popup_cdb68dab054db01709466e5dcc14cb58.setContent(html_0b6dbbb82be36892246fbbeed16449f6);
+            
+        
+
+        circle_marker_b89a1fe57304affed70a14315d5e65a1.bindPopup(popup_cdb68dab054db01709466e5dcc14cb58)
+        ;
+
+        
+    
+    
+            var circle_marker_140bdf8fda5ca06b60911849ccfcb4ac = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_6b6c07a5fea45916a506ceaf48e694e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e8ae1d00f2e4af09ec2fdd026976a51 = $(`<div id="html_4e8ae1d00f2e4af09ec2fdd026976a51" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the united kingdom of great britain and nothern ireland<br>Emission in kg of CO2/year: 364.0</div>`)[0];
+                popup_6b6c07a5fea45916a506ceaf48e694e5.setContent(html_4e8ae1d00f2e4af09ec2fdd026976a51);
+            
+        
+
+        circle_marker_140bdf8fda5ca06b60911849ccfcb4ac.bindPopup(popup_6b6c07a5fea45916a506ceaf48e694e5)
+        ;
+
+        
+    
+    
+            var circle_marker_975c340d31877bed298a1b2ad09a911d = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_9643214cb658e898de3d103784de68c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d306cf6bb8c1066791329b4ec9a9595 = $(`<div id="html_5d306cf6bb8c1066791329b4ec9a9595" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: un human rights office of the high commissioner for human rights<br>Emission in kg of CO2/year: 4199.0</div>`)[0];
+                popup_9643214cb658e898de3d103784de68c9.setContent(html_5d306cf6bb8c1066791329b4ec9a9595);
+            
+        
+
+        circle_marker_975c340d31877bed298a1b2ad09a911d.bindPopup(popup_9643214cb658e898de3d103784de68c9)
+        ;
+
+        
+    
+    
+            var circle_marker_74dc1321d60b4670d21faeea3516f92e = L.circleMarker(
+                [46.2218286, 6.137159],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_aa212809b740fc4f6583098bebd42f78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be8d8f6b7ac6a7a02e965cf8c18cc2b8 = $(`<div id="html_be8d8f6b7ac6a7a02e965cf8c18cc2b8" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: upov international union for the protection of new varieties of plants<br>Emission in kg of CO2/year: 101.0</div>`)[0];
+                popup_aa212809b740fc4f6583098bebd42f78.setContent(html_be8d8f6b7ac6a7a02e965cf8c18cc2b8);
+            
+        
+
+        circle_marker_74dc1321d60b4670d21faeea3516f92e.bindPopup(popup_aa212809b740fc4f6583098bebd42f78)
+        ;
+
+        
+    
+    
+            var circle_marker_1f859afd707794468b6347591991c809 = L.circleMarker(
+                [46.2224013, 6.1380736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_368d28578578f43310fd4a166c2145a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32047aaeef751c1577400e90656a0cd5 = $(`<div id="html_32047aaeef751c1577400e90656a0cd5" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: itu international telecommunication union<br>Emission in kg of CO2/year: 3657.0</div>`)[0];
+                popup_368d28578578f43310fd4a166c2145a7.setContent(html_32047aaeef751c1577400e90656a0cd5);
+            
+        
+
+        circle_marker_1f859afd707794468b6347591991c809.bindPopup(popup_368d28578578f43310fd4a166c2145a7)
+        ;
+
+        
+    
+    
+            var circle_marker_8efd5112068d2b4c3f2708820abecd4b = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_47c933ed6ca24156ecf76f11a2042e31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cbed2a1e54263b81f23b8004bc3a3d9e = $(`<div id="html_cbed2a1e54263b81f23b8004bc3a3d9e" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of france<br>Emission in kg of CO2/year: 257.0</div>`)[0];
+                popup_47c933ed6ca24156ecf76f11a2042e31.setContent(html_cbed2a1e54263b81f23b8004bc3a3d9e);
+            
+        
+
+        circle_marker_8efd5112068d2b4c3f2708820abecd4b.bindPopup(popup_47c933ed6ca24156ecf76f11a2042e31)
+        ;
+
+        
+    
+    
+            var circle_marker_9de3939b73dcf8562e61c5841ef361d5 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_dcac37f221b26809bd939c50772cd0aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71040d3ed23af3c885c2155579eba4db = $(`<div id="html_71040d3ed23af3c885c2155579eba4db" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: unhcr the un refugee agency<br>Emission in kg of CO2/year: 1516.0</div>`)[0];
+                popup_dcac37f221b26809bd939c50772cd0aa.setContent(html_71040d3ed23af3c885c2155579eba4db);
+            
+        
+
+        circle_marker_9de3939b73dcf8562e61c5841ef361d5.bindPopup(popup_dcac37f221b26809bd939c50772cd0aa)
+        ;
+
+        
+    
+    
+            var circle_marker_ba9c6aef556781138f5a772ea6ca5261 = L.circleMarker(
+                [46.2255721, 6.1311095],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5655d520f9e119663b5b02eca585eb73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db8738958c4c824309a0377ad368fdcd = $(`<div id="html_db8738958c4c824309a0377ad368fdcd" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of norway<br>Emission in kg of CO2/year: 80.0</div>`)[0];
+                popup_5655d520f9e119663b5b02eca585eb73.setContent(html_db8738958c4c824309a0377ad368fdcd);
+            
+        
+
+        circle_marker_ba9c6aef556781138f5a772ea6ca5261.bindPopup(popup_5655d520f9e119663b5b02eca585eb73)
+        ;
+
+        
+    
+    
+            var circle_marker_0ed37c96215ef6b5d88b38fa574454cb = L.circleMarker(
+                [46.225705500000004, 6.140806439130429],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_4227f4136cba698b3c0256c6228c1690 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c247712274a0e9d0cf35bcc5218cd5a = $(`<div id="html_9c247712274a0e9d0cf35bcc5218cd5a" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: path foundation for appropriate technologies in health<br>Emission in kg of CO2/year: 143.0</div>`)[0];
+                popup_4227f4136cba698b3c0256c6228c1690.setContent(html_9c247712274a0e9d0cf35bcc5218cd5a);
+            
+        
+
+        circle_marker_0ed37c96215ef6b5d88b38fa574454cb.bindPopup(popup_4227f4136cba698b3c0256c6228c1690)
+        ;
+
+        
+    
+    
+            var circle_marker_11351351500fa5cfcf4c15a9e40b89e2 = L.circleMarker(
+                [46.2261633, 6.1239301],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_235222ddcc45cbbc3bbb76f66e1e5d4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98d26fb02b2cd9eee35457e517912dad = $(`<div id="html_98d26fb02b2cd9eee35457e517912dad" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of switzerland<br>Emission in kg of CO2/year: 264.0</div>`)[0];
+                popup_235222ddcc45cbbc3bbb76f66e1e5d4a.setContent(html_98d26fb02b2cd9eee35457e517912dad);
+            
+        
+
+        circle_marker_11351351500fa5cfcf4c15a9e40b89e2.bindPopup(popup_235222ddcc45cbbc3bbb76f66e1e5d4a)
+        ;
+
+        
+    
+    
+            var circle_marker_4aac4ba621991b69896fdfa218d4367c = L.circleMarker(
+                [46.228251549999996, 6.1424633241700475],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_f8eeba0b57a925896ae96ea9d0d81bba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c844ca6312930f4e3fbea02fc9d1a026 = $(`<div id="html_c844ca6312930f4e3fbea02fc9d1a026" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: ishr international service for human rights<br>Emission in kg of CO2/year: 156.0</div>`)[0];
+                popup_f8eeba0b57a925896ae96ea9d0d81bba.setContent(html_c844ca6312930f4e3fbea02fc9d1a026);
+            
+        
+
+        circle_marker_4aac4ba621991b69896fdfa218d4367c.bindPopup(popup_f8eeba0b57a925896ae96ea9d0d81bba)
+        ;
+
+        
+    
+    
+            var circle_marker_ca2d18c3933eab7826a7d5d7ca905ecf = L.circleMarker(
+                [46.2286278, 6.1346858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_a25842f4d99d3be4d49b7eb1745fdf47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fb6ea53c11f538a91ad059dc305c97d = $(`<div id="html_4fb6ea53c11f538a91ad059dc305c97d" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: ilo international labour organization<br>Emission in kg of CO2/year: 8122.0</div>`)[0];
+                popup_a25842f4d99d3be4d49b7eb1745fdf47.setContent(html_4fb6ea53c11f538a91ad059dc305c97d);
+            
+        
+
+        circle_marker_ca2d18c3933eab7826a7d5d7ca905ecf.bindPopup(popup_a25842f4d99d3be4d49b7eb1745fdf47)
+        ;
+
+        
+    
+    
+            var circle_marker_b055623bd6284d50468840c40e2bfbd1 = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_8ba08cd193d737ec2e40c94e022b4612 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e56e705dab59fed02ed56f6b1a562b5c = $(`<div id="html_e56e705dab59fed02ed56f6b1a562b5c" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: wmo world meteorological organization<br>Emission in kg of CO2/year: 5782.0</div>`)[0];
+                popup_8ba08cd193d737ec2e40c94e022b4612.setContent(html_e56e705dab59fed02ed56f6b1a562b5c);
+            
+        
+
+        circle_marker_b055623bd6284d50468840c40e2bfbd1.bindPopup(popup_8ba08cd193d737ec2e40c94e022b4612)
+        ;
+
+        
+    
+    
+            var circle_marker_8c5bdc82526659af800af7160a04b521 = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_3c9fe062e4cb21255e729d02c0f357db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7568f7ce2c3558050ed8379c9e43cee = $(`<div id="html_e7568f7ce2c3558050ed8379c9e43cee" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: world intellectual property organization<br>Emission in kg of CO2/year: 4132.0</div>`)[0];
+                popup_3c9fe062e4cb21255e729d02c0f357db.setContent(html_e7568f7ce2c3558050ed8379c9e43cee);
+            
+        
+
+        circle_marker_8c5bdc82526659af800af7160a04b521.bindPopup(popup_3c9fe062e4cb21255e729d02c0f357db)
+        ;
+
+        
+    
+    
+            var circle_marker_c4e0a678c10c8fd7d322f5ee2b612689 = L.circleMarker(
+                [46.2303302, 6.1222181],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_18b37dc9d94ba406c7856e8925aa2b02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e88f3e0e2332d45145b495eb3e49fea4 = $(`<div id="html_e88f3e0e2332d45145b495eb3e49fea4" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: permanent mission of the kingdom of morocco<br>Emission in kg of CO2/year: 59.0</div>`)[0];
+                popup_18b37dc9d94ba406c7856e8925aa2b02.setContent(html_e88f3e0e2332d45145b495eb3e49fea4);
+            
+        
+
+        circle_marker_c4e0a678c10c8fd7d322f5ee2b612689.bindPopup(popup_18b37dc9d94ba406c7856e8925aa2b02)
+        ;
+
+        
+    
+    
+            var circle_marker_94956b1ee1ba4b411be53fed08d97d64 = L.circleMarker(
+                [46.2330338, 6.0556926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_37a62a86d01ef84c0a77b390da344ab3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65f384b6e671fbcc2670927fe501dd3a = $(`<div id="html_65f384b6e671fbcc2670927fe501dd3a" style="width: 100.0%; height: 100.0%;">Year: 2020<br>Organization: ebu european broadcasting union<br>Emission in kg of CO2/year: 1718.0</div>`)[0];
+                popup_37a62a86d01ef84c0a77b390da344ab3.setContent(html_65f384b6e671fbcc2670927fe501dd3a);
+            
+        
+
+        circle_marker_94956b1ee1ba4b411be53fed08d97d64.bindPopup(popup_37a62a86d01ef84c0a77b390da344ab3)
+        ;
+
+        
+    
+    
+            var heat_map_418f5489f3832d1d7ad47354d1f98be9 = L.heatLayer(
+                [[46.2022496, 6.1416388, 80.0], [46.2022496, 6.1416388, 124.0], [46.21318, 6.11124, 156.0], [46.21326055326364, 6.147476023532721, 90.0], [46.2138171, 6.1460309, 32.0], [46.2138171, 6.1460309, 83.0], [46.2138171, 6.1460309, 28.0], [46.2138171, 6.1460309, 12368.0], [46.2156717, 6.1322563, 165.0], [46.2167065, 6.1480928, 47.0], [46.217619, 6.1481622, 10.6], [46.217619, 6.1481622, 49615.0], [46.217619, 6.1481622, 546.0], [46.21934176011838, 6.134093111889695, 87.0], [46.2197449, 6.1367197, 79.0], [46.2200491, 6.143868, 10963.0], [46.2200491, 6.143868, 2626.0], [46.2200491, 6.143868, 44.0], [46.2200491, 6.143868, 7.0], [46.2200491, 6.143868, 3.0], [46.2205313, 6.1295725, 21.0], [46.22092633253714, 6.139227211889732, 229.0], [46.22092633253714, 6.139227211889732, 166.0], [46.22092633253714, 6.139227211889732, 1341.0], [46.2213651, 6.1395961, 214.0], [46.2218286, 6.137159, 49.0], [46.2224013, 6.1380736, 1930.0], [46.222618, 6.1329042, 15.0], [46.222618, 6.1329042, 243.0], [46.222618, 6.1329042, 837.0], [46.2232015, 6.1437187, 218.0], [46.2255721, 6.1311095, 69.0], [46.225705500000004, 6.140806439130429, 25.0], [46.225705500000004, 6.140806439130429, 36.0], [46.2259162, 6.1370571, 68.0], [46.2261633, 6.1239301, 218.0], [46.228251549999996, 6.1424633241700475, 56.0], [46.2286278, 6.1346858, 3810.0], [46.2299159, 6.1286488, 1125.0], [46.2299159, 6.1286488, 2468.0], [46.23008, 6.12257, 36.0], [46.2303302, 6.1222181, 45.0], [46.2330338, 6.0556926, 715.0]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 50}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+            var circle_marker_4b126c64e346866a4f2f960e86351c9b = L.circleMarker(
+                [46.2022496, 6.1416388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_a319015b0914cd90c3b7c876ca69fbf4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_472a4ecd7595fba7752388f0466253a1 = $(`<div id="html_472a4ecd7595fba7752388f0466253a1" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: ccig chambre de commerce dindustrie et des services de geneve<br>Emission in kg of CO2/year: 80.0</div>`)[0];
+                popup_a319015b0914cd90c3b7c876ca69fbf4.setContent(html_472a4ecd7595fba7752388f0466253a1);
+            
+        
+
+        circle_marker_4b126c64e346866a4f2f960e86351c9b.bindPopup(popup_a319015b0914cd90c3b7c876ca69fbf4)
+        ;
+
+        
+    
+    
+            var circle_marker_c32841da1f5a6cda418fbfb77bd4ac4a = L.circleMarker(
+                [46.2022496, 6.1416388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_af49368117c37e47a1755b285440c51c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_810de3a8fe4258ef6d7db0f27498f2b1 = $(`<div id="html_810de3a8fe4258ef6d7db0f27498f2b1" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: fipoi foundation for buildings for international organisations<br>Emission in kg of CO2/year: 124.0</div>`)[0];
+                popup_af49368117c37e47a1755b285440c51c.setContent(html_810de3a8fe4258ef6d7db0f27498f2b1);
+            
+        
+
+        circle_marker_c32841da1f5a6cda418fbfb77bd4ac4a.bindPopup(popup_af49368117c37e47a1755b285440c51c)
+        ;
+
+        
+    
+    
+            var circle_marker_9656bf0c287f38321db90c610e783a75 = L.circleMarker(
+                [46.21318, 6.11124],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5e7d4bdabcc263a8a58cd6ee8c80cc51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_709cf25d681e881aaa9263c00e027666 = $(`<div id="html_709cf25d681e881aaa9263c00e027666" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: united nations environment programme geneva office<br>Emission in kg of CO2/year: 156.0</div>`)[0];
+                popup_5e7d4bdabcc263a8a58cd6ee8c80cc51.setContent(html_709cf25d681e881aaa9263c00e027666);
+            
+        
+
+        circle_marker_9656bf0c287f38321db90c610e783a75.bindPopup(popup_5e7d4bdabcc263a8a58cd6ee8c80cc51)
+        ;
+
+        
+    
+    
+            var circle_marker_ff1cd4d4c4aa573a3a5c6c8a6017f349 = L.circleMarker(
+                [46.21326055326364, 6.147476023532721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_676376b08ac01d1bf0c008a054a90862 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20270653da989e361999be8ff188c8fa = $(`<div id="html_20270653da989e361999be8ff188c8fa" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the republic of slovenia<br>Emission in kg of CO2/year: 90.0</div>`)[0];
+                popup_676376b08ac01d1bf0c008a054a90862.setContent(html_20270653da989e361999be8ff188c8fa);
+            
+        
+
+        circle_marker_ff1cd4d4c4aa573a3a5c6c8a6017f349.bindPopup(popup_676376b08ac01d1bf0c008a054a90862)
+        ;
+
+        
+    
+    
+            var circle_marker_f405112686da50c715b34587b16fb10e = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_87ce0b47a153fc6e6f29a5c35908d5a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f014e96db7e8229c25c0a1d82fa6d4e8 = $(`<div id="html_f014e96db7e8229c25c0a1d82fa6d4e8" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of norway 2<br>Emission in kg of CO2/year: 32.0</div>`)[0];
+                popup_87ce0b47a153fc6e6f29a5c35908d5a1.setContent(html_f014e96db7e8229c25c0a1d82fa6d4e8);
+            
+        
+
+        circle_marker_f405112686da50c715b34587b16fb10e.bindPopup(popup_87ce0b47a153fc6e6f29a5c35908d5a1)
+        ;
+
+        
+    
+    
+            var circle_marker_dc986acfce20a8e095a37bb5c33d15ac = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_ba30edfd505b4aa7678a5ac511dbe868 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76e6ed5d6650d57c9bb66a9d99c2eab9 = $(`<div id="html_76e6ed5d6650d57c9bb66a9d99c2eab9" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of portugal<br>Emission in kg of CO2/year: 83.0</div>`)[0];
+                popup_ba30edfd505b4aa7678a5ac511dbe868.setContent(html_76e6ed5d6650d57c9bb66a9d99c2eab9);
+            
+        
+
+        circle_marker_dc986acfce20a8e095a37bb5c33d15ac.bindPopup(popup_ba30edfd505b4aa7678a5ac511dbe868)
+        ;
+
+        
+    
+    
+            var circle_marker_1e2146db7076a12e8be26d6c7c1cdfd1 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_c128e1a9875b98d97755e2deb9e33729 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59cb6db72ef191c3b9c467876e7d7cce = $(`<div id="html_59cb6db72ef191c3b9c467876e7d7cce" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of tunisia<br>Emission in kg of CO2/year: 28.0</div>`)[0];
+                popup_c128e1a9875b98d97755e2deb9e33729.setContent(html_59cb6db72ef191c3b9c467876e7d7cce);
+            
+        
+
+        circle_marker_1e2146db7076a12e8be26d6c7c1cdfd1.bindPopup(popup_c128e1a9875b98d97755e2deb9e33729)
+        ;
+
+        
+    
+    
+            var circle_marker_5c4743baef73cf34705bac5302ed3847 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_f2c9c87715694701f6f40921ad869208 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a90899fb9bcfebcf10a251aa939584f5 = $(`<div id="html_a90899fb9bcfebcf10a251aa939584f5" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: who world health organization<br>Emission in kg of CO2/year: 12368.0</div>`)[0];
+                popup_f2c9c87715694701f6f40921ad869208.setContent(html_a90899fb9bcfebcf10a251aa939584f5);
+            
+        
+
+        circle_marker_5c4743baef73cf34705bac5302ed3847.bindPopup(popup_f2c9c87715694701f6f40921ad869208)
+        ;
+
+        
+    
+    
+            var circle_marker_d03922bb91d26d1182b1117de37cf62c = L.circleMarker(
+                [46.2156717, 6.1322563],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_51efbd8d60de0f426fcd1fc015c9e4be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3873722ba5f18ab47ad49748217df11a = $(`<div id="html_3873722ba5f18ab47ad49748217df11a" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent delegation of the european union<br>Emission in kg of CO2/year: 165.0</div>`)[0];
+                popup_51efbd8d60de0f426fcd1fc015c9e4be.setContent(html_3873722ba5f18ab47ad49748217df11a);
+            
+        
+
+        circle_marker_d03922bb91d26d1182b1117de37cf62c.bindPopup(popup_51efbd8d60de0f426fcd1fc015c9e4be)
+        ;
+
+        
+    
+    
+            var circle_marker_b89ce9f6ea89e93f971579db333ee4d1 = L.circleMarker(
+                [46.2167065, 6.1480928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_9460ba7efd385b57d55b74621d9c98b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3820d879f834b23e3497f79eed292d58 = $(`<div id="html_3820d879f834b23e3497f79eed292d58" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the republic of rwanda<br>Emission in kg of CO2/year: 47.0</div>`)[0];
+                popup_9460ba7efd385b57d55b74621d9c98b2.setContent(html_3820d879f834b23e3497f79eed292d58);
+            
+        
+
+        circle_marker_b89ce9f6ea89e93f971579db333ee4d1.bindPopup(popup_9460ba7efd385b57d55b74621d9c98b2)
+        ;
+
+        
+    
+    
+            var circle_marker_b01304787b5c359988685976841408d0 = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_ff097e356bf83f2bdfef981deaa0323f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ded6711573555d90e637ae379a81e8f6 = $(`<div id="html_ded6711573555d90e637ae379a81e8f6" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: diplomatic club of geneva<br>Emission in kg of CO2/year: 10.6</div>`)[0];
+                popup_ff097e356bf83f2bdfef981deaa0323f.setContent(html_ded6711573555d90e637ae379a81e8f6);
+            
+        
+
+        circle_marker_b01304787b5c359988685976841408d0.bindPopup(popup_ff097e356bf83f2bdfef981deaa0323f)
+        ;
+
+        
+    
+    
+            var circle_marker_01e42c9c1bc42811214a964534aaa235 = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_b7167d55a586fea74fe8292ce87d3c6a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76fab5f20a213f7055b7969411ca822a = $(`<div id="html_76fab5f20a213f7055b7969411ca822a" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: unige university of geneva<br>Emission in kg of CO2/year: 49615.0</div>`)[0];
+                popup_b7167d55a586fea74fe8292ce87d3c6a.setContent(html_76fab5f20a213f7055b7969411ca822a);
+            
+        
+
+        circle_marker_01e42c9c1bc42811214a964534aaa235.bindPopup(popup_b7167d55a586fea74fe8292ce87d3c6a)
+        ;
+
+        
+    
+    
+            var circle_marker_bb340820734c4b4932df1e1ef66bc4fb = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_ddabab9758c81f9affcf3debdc16ea68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93df46e0d9210f88e66d36be2c4fba60 = $(`<div id="html_93df46e0d9210f88e66d36be2c4fba60" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: wcc world council of churches<br>Emission in kg of CO2/year: 546.0</div>`)[0];
+                popup_ddabab9758c81f9affcf3debdc16ea68.setContent(html_93df46e0d9210f88e66d36be2c4fba60);
+            
+        
+
+        circle_marker_bb340820734c4b4932df1e1ef66bc4fb.bindPopup(popup_ddabab9758c81f9affcf3debdc16ea68)
+        ;
+
+        
+    
+    
+            var circle_marker_93debb3c3902ab5e21b34ae463db9a5e = L.circleMarker(
+                [46.21934176011838, 6.134093111889695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_4fd5404477c128970429b75e72de92fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_713992f9b7545d685db7427f84383cc9 = $(`<div id="html_713992f9b7545d685db7427f84383cc9" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: nrc norwegian refugee council geneva office idmc internal displacement monitoring centre<br>Emission in kg of CO2/year: 87.0</div>`)[0];
+                popup_4fd5404477c128970429b75e72de92fd.setContent(html_713992f9b7545d685db7427f84383cc9);
+            
+        
+
+        circle_marker_93debb3c3902ab5e21b34ae463db9a5e.bindPopup(popup_4fd5404477c128970429b75e72de92fd)
+        ;
+
+        
+    
+    
+            var circle_marker_1644c0b9573199aeda22376968562738 = L.circleMarker(
+                [46.2197449, 6.1367197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_357286d7775949fc12a8ddf4827b4f1a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b148fde02921af8ed0df68fff07c6333 = $(`<div id="html_b148fde02921af8ed0df68fff07c6333" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of mexico<br>Emission in kg of CO2/year: 79.0</div>`)[0];
+                popup_357286d7775949fc12a8ddf4827b4f1a.setContent(html_b148fde02921af8ed0df68fff07c6333);
+            
+        
+
+        circle_marker_1644c0b9573199aeda22376968562738.bindPopup(popup_357286d7775949fc12a8ddf4827b4f1a)
+        ;
+
+        
+    
+    
+            var circle_marker_4befc593efaa4b90627108d8e9ab8949 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_659eb55d8548dd74eddfc9932e7ef794 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7200fe97fa1e3fbbe3c1c5fdb5c6723a = $(`<div id="html_7200fe97fa1e3fbbe3c1c5fdb5c6723a" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: ioc the international olympic committee<br>Emission in kg of CO2/year: 10963.0</div>`)[0];
+                popup_659eb55d8548dd74eddfc9932e7ef794.setContent(html_7200fe97fa1e3fbbe3c1c5fdb5c6723a);
+            
+        
+
+        circle_marker_4befc593efaa4b90627108d8e9ab8949.bindPopup(popup_659eb55d8548dd74eddfc9932e7ef794)
+        ;
+
+        
+    
+    
+            var circle_marker_643a375cbc52f490269010df7ab0d308 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_706caaac1b141532e17d35b47d6b7695 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_459f2ef894da7995c90c29b2cf5d4742 = $(`<div id="html_459f2ef894da7995c90c29b2cf5d4742" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: office of the united nations in geneva<br>Emission in kg of CO2/year: 2626.0</div>`)[0];
+                popup_706caaac1b141532e17d35b47d6b7695.setContent(html_459f2ef894da7995c90c29b2cf5d4742);
+            
+        
+
+        circle_marker_643a375cbc52f490269010df7ab0d308.bindPopup(popup_706caaac1b141532e17d35b47d6b7695)
+        ;
+
+        
+    
+    
+            var circle_marker_57f708d43ce45accebccfd26531b8d4c = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_efcb2e5ff97121de58cee4ea5571d791 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc6a296e7f23d27613ed10604946d5b5 = $(`<div id="html_fc6a296e7f23d27613ed10604946d5b5" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of finland<br>Emission in kg of CO2/year: 44.0</div>`)[0];
+                popup_efcb2e5ff97121de58cee4ea5571d791.setContent(html_fc6a296e7f23d27613ed10604946d5b5);
+            
+        
+
+        circle_marker_57f708d43ce45accebccfd26531b8d4c.bindPopup(popup_efcb2e5ff97121de58cee4ea5571d791)
+        ;
+
+        
+    
+    
+            var circle_marker_72428019f920ce3ac4fb2b5a787c3f16 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_b48e75342c14784d0f460c1d6169b89f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e8d206de1f1e3a94cf52730a3cb28a9 = $(`<div id="html_2e8d206de1f1e3a94cf52730a3cb28a9" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the fiji republic<br>Emission in kg of CO2/year: 7.0</div>`)[0];
+                popup_b48e75342c14784d0f460c1d6169b89f.setContent(html_2e8d206de1f1e3a94cf52730a3cb28a9);
+            
+        
+
+        circle_marker_72428019f920ce3ac4fb2b5a787c3f16.bindPopup(popup_b48e75342c14784d0f460c1d6169b89f)
+        ;
+
+        
+    
+    
+            var circle_marker_f71464c128c64314d6b76ffe24c964ca = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_ebc38c309f0985476567868c913fc879 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e30012818e72ff52ca012676c034ae7 = $(`<div id="html_2e30012818e72ff52ca012676c034ae7" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the republic of costa rica<br>Emission in kg of CO2/year: 3.0</div>`)[0];
+                popup_ebc38c309f0985476567868c913fc879.setContent(html_2e30012818e72ff52ca012676c034ae7);
+            
+        
+
+        circle_marker_f71464c128c64314d6b76ffe24c964ca.bindPopup(popup_ebc38c309f0985476567868c913fc879)
+        ;
+
+        
+    
+    
+            var circle_marker_82aa6d8ac2f7ced02f473cae7097c371 = L.circleMarker(
+                [46.2205313, 6.1295725],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_efb40485774cb47f4031da3f404b24dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72a49030caedc123bbe5bee521e705e9 = $(`<div id="html_72a49030caedc123bbe5bee521e705e9" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of ireland<br>Emission in kg of CO2/year: 21.0</div>`)[0];
+                popup_efb40485774cb47f4031da3f404b24dd.setContent(html_72a49030caedc123bbe5bee521e705e9);
+            
+        
+
+        circle_marker_82aa6d8ac2f7ced02f473cae7097c371.bindPopup(popup_efb40485774cb47f4031da3f404b24dd)
+        ;
+
+        
+    
+    
+            var circle_marker_6624efecf3ef17f9acd8e1815342b663 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e9a30be8cfe65c7662a74eb2cdc7acc2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f74ae05f3362a934b927c0130e50dbbd = $(`<div id="html_f74ae05f3362a934b927c0130e50dbbd" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the federal republic of germany<br>Emission in kg of CO2/year: 229.0</div>`)[0];
+                popup_e9a30be8cfe65c7662a74eb2cdc7acc2.setContent(html_f74ae05f3362a934b927c0130e50dbbd);
+            
+        
+
+        circle_marker_6624efecf3ef17f9acd8e1815342b663.bindPopup(popup_e9a30be8cfe65c7662a74eb2cdc7acc2)
+        ;
+
+        
+    
+    
+            var circle_marker_4ccf7c253a761239d44f3c0039a7d003 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_9baad2d70330e65e349ea387e08762c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f7f430fec41a78fba276d56ba130359 = $(`<div id="html_8f7f430fec41a78fba276d56ba130359" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the united kingdom of great britain and nothern ireland<br>Emission in kg of CO2/year: 166.0</div>`)[0];
+                popup_9baad2d70330e65e349ea387e08762c3.setContent(html_8f7f430fec41a78fba276d56ba130359);
+            
+        
+
+        circle_marker_4ccf7c253a761239d44f3c0039a7d003.bindPopup(popup_9baad2d70330e65e349ea387e08762c3)
+        ;
+
+        
+    
+    
+            var circle_marker_68b23757864220d511786e2713d32039 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_83b4222309cdee5c16704256abd595c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cda949c3a611d5aacbd0c50f1b23854b = $(`<div id="html_cda949c3a611d5aacbd0c50f1b23854b" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: un human rights office of the high commissioner for human rights<br>Emission in kg of CO2/year: 1341.0</div>`)[0];
+                popup_83b4222309cdee5c16704256abd595c5.setContent(html_cda949c3a611d5aacbd0c50f1b23854b);
+            
+        
+
+        circle_marker_68b23757864220d511786e2713d32039.bindPopup(popup_83b4222309cdee5c16704256abd595c5)
+        ;
+
+        
+    
+    
+            var circle_marker_3ed0838a77a27d338de458ee905bd160 = L.circleMarker(
+                [46.2213651, 6.1395961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_2e3c4dd1c11440b590bc78ca70cbf279 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6537d08e7c2adc5c0184be724b308c26 = $(`<div id="html_6537d08e7c2adc5c0184be724b308c26" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: geneva call<br>Emission in kg of CO2/year: 214.0</div>`)[0];
+                popup_2e3c4dd1c11440b590bc78ca70cbf279.setContent(html_6537d08e7c2adc5c0184be724b308c26);
+            
+        
+
+        circle_marker_3ed0838a77a27d338de458ee905bd160.bindPopup(popup_2e3c4dd1c11440b590bc78ca70cbf279)
+        ;
+
+        
+    
+    
+            var circle_marker_1540a57ecde482cb2208700282418a95 = L.circleMarker(
+                [46.2218286, 6.137159],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d2bbb0457515d8288aad5cf9d1557b83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c717d50975f3675b5549fd05ceb95886 = $(`<div id="html_c717d50975f3675b5549fd05ceb95886" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: upov international union for the protection of new varieties of plants<br>Emission in kg of CO2/year: 49.0</div>`)[0];
+                popup_d2bbb0457515d8288aad5cf9d1557b83.setContent(html_c717d50975f3675b5549fd05ceb95886);
+            
+        
+
+        circle_marker_1540a57ecde482cb2208700282418a95.bindPopup(popup_d2bbb0457515d8288aad5cf9d1557b83)
+        ;
+
+        
+    
+    
+            var circle_marker_14db80a306d5a949e0f1360ad97988db = L.circleMarker(
+                [46.2224013, 6.1380736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_984d660e3a4b79f3a4b7bfcf051a497d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b191078f892cc7b2a1a8a51b885f2fd = $(`<div id="html_4b191078f892cc7b2a1a8a51b885f2fd" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: itu international telecommunication union<br>Emission in kg of CO2/year: 1930.0</div>`)[0];
+                popup_984d660e3a4b79f3a4b7bfcf051a497d.setContent(html_4b191078f892cc7b2a1a8a51b885f2fd);
+            
+        
+
+        circle_marker_14db80a306d5a949e0f1360ad97988db.bindPopup(popup_984d660e3a4b79f3a4b7bfcf051a497d)
+        ;
+
+        
+    
+    
+            var circle_marker_3219bafaa9f9b5a45c7821c2b24fc857 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_fac8fc1367f77dcac89c378a98bcca50 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4904f019891c0d9a63209d173f1a462 = $(`<div id="html_c4904f019891c0d9a63209d173f1a462" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of chile<br>Emission in kg of CO2/year: 15.0</div>`)[0];
+                popup_fac8fc1367f77dcac89c378a98bcca50.setContent(html_c4904f019891c0d9a63209d173f1a462);
+            
+        
+
+        circle_marker_3219bafaa9f9b5a45c7821c2b24fc857.bindPopup(popup_fac8fc1367f77dcac89c378a98bcca50)
+        ;
+
+        
+    
+    
+            var circle_marker_069bcfa4c5580fa8838cc4cff4279049 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_49b67df21011dfd2a1af79c9eeeb762f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5395e49e34453ccc0973ed3d3ed372e8 = $(`<div id="html_5395e49e34453ccc0973ed3d3ed372e8" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of france<br>Emission in kg of CO2/year: 243.0</div>`)[0];
+                popup_49b67df21011dfd2a1af79c9eeeb762f.setContent(html_5395e49e34453ccc0973ed3d3ed372e8);
+            
+        
+
+        circle_marker_069bcfa4c5580fa8838cc4cff4279049.bindPopup(popup_49b67df21011dfd2a1af79c9eeeb762f)
+        ;
+
+        
+    
+    
+            var circle_marker_30a09464d33faab30005bbbc33130ca9 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_fd57dd752a28cc251e7385decebd6ea8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c3f74daf8c22621ea2f8d7015533713 = $(`<div id="html_4c3f74daf8c22621ea2f8d7015533713" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: unhcr the un refugee agency<br>Emission in kg of CO2/year: 837.0</div>`)[0];
+                popup_fd57dd752a28cc251e7385decebd6ea8.setContent(html_4c3f74daf8c22621ea2f8d7015533713);
+            
+        
+
+        circle_marker_30a09464d33faab30005bbbc33130ca9.bindPopup(popup_fd57dd752a28cc251e7385decebd6ea8)
+        ;
+
+        
+    
+    
+            var circle_marker_c2e4fc1005f56a76569f9efef4b743fc = L.circleMarker(
+                [46.2232015, 6.1437187],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d59a226a3033ef8473cf070ab181d0bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6f6048f03071163dbf67e2af16b5223 = $(`<div id="html_b6f6048f03071163dbf67e2af16b5223" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: gichd geneva international centre for humanitarian demining<br>Emission in kg of CO2/year: 218.0</div>`)[0];
+                popup_d59a226a3033ef8473cf070ab181d0bc.setContent(html_b6f6048f03071163dbf67e2af16b5223);
+            
+        
+
+        circle_marker_c2e4fc1005f56a76569f9efef4b743fc.bindPopup(popup_d59a226a3033ef8473cf070ab181d0bc)
+        ;
+
+        
+    
+    
+            var circle_marker_25812c93afe2378dcb6019be0606a3f9 = L.circleMarker(
+                [46.2255721, 6.1311095],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e26f367b5246db73d8601831beb3b26e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41bb03a97f04a9efa0bfd3ef1231666c = $(`<div id="html_41bb03a97f04a9efa0bfd3ef1231666c" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of norway<br>Emission in kg of CO2/year: 69.0</div>`)[0];
+                popup_e26f367b5246db73d8601831beb3b26e.setContent(html_41bb03a97f04a9efa0bfd3ef1231666c);
+            
+        
+
+        circle_marker_25812c93afe2378dcb6019be0606a3f9.bindPopup(popup_e26f367b5246db73d8601831beb3b26e)
+        ;
+
+        
+    
+    
+            var circle_marker_f31e05dac32f95f55b236bcc9164ccc9 = L.circleMarker(
+                [46.225705500000004, 6.140806439130429],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d688bd4d5fdd6c89d4fb1d5c6b04f5ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3a53930188a37b89d0f2f80b330638c = $(`<div id="html_f3a53930188a37b89d0f2f80b330638c" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: icva international council of voluntary agencies<br>Emission in kg of CO2/year: 25.0</div>`)[0];
+                popup_d688bd4d5fdd6c89d4fb1d5c6b04f5ab.setContent(html_f3a53930188a37b89d0f2f80b330638c);
+            
+        
+
+        circle_marker_f31e05dac32f95f55b236bcc9164ccc9.bindPopup(popup_d688bd4d5fdd6c89d4fb1d5c6b04f5ab)
+        ;
+
+        
+    
+    
+            var circle_marker_c1375b9b69fe8c13a35ab661fead91eb = L.circleMarker(
+                [46.225705500000004, 6.140806439130429],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_148068286f0ebd937f87267bd4bb0822 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35581cef570f336f70835424b58066a3 = $(`<div id="html_35581cef570f336f70835424b58066a3" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: path foundation for appropriate technologies in health<br>Emission in kg of CO2/year: 36.0</div>`)[0];
+                popup_148068286f0ebd937f87267bd4bb0822.setContent(html_35581cef570f336f70835424b58066a3);
+            
+        
+
+        circle_marker_c1375b9b69fe8c13a35ab661fead91eb.bindPopup(popup_148068286f0ebd937f87267bd4bb0822)
+        ;
+
+        
+    
+    
+            var circle_marker_493dc6b0f74bf0f8dfd2e426a6f32a12 = L.circleMarker(
+                [46.2259162, 6.1370571],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5af29be6b6d0596fec8f911d9d9b8f38 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c5ebf6fbef1f2bdc256201f3e18b8d8 = $(`<div id="html_8c5ebf6fbef1f2bdc256201f3e18b8d8" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of israel<br>Emission in kg of CO2/year: 68.0</div>`)[0];
+                popup_5af29be6b6d0596fec8f911d9d9b8f38.setContent(html_8c5ebf6fbef1f2bdc256201f3e18b8d8);
+            
+        
+
+        circle_marker_493dc6b0f74bf0f8dfd2e426a6f32a12.bindPopup(popup_5af29be6b6d0596fec8f911d9d9b8f38)
+        ;
+
+        
+    
+    
+            var circle_marker_9ad563360a7918665f138083636889d1 = L.circleMarker(
+                [46.2261633, 6.1239301],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_60be12732dabf7ce1a1df52df697e73c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a5966f3207dac2b28d9325825783646 = $(`<div id="html_5a5966f3207dac2b28d9325825783646" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of switzerland<br>Emission in kg of CO2/year: 218.0</div>`)[0];
+                popup_60be12732dabf7ce1a1df52df697e73c.setContent(html_5a5966f3207dac2b28d9325825783646);
+            
+        
+
+        circle_marker_9ad563360a7918665f138083636889d1.bindPopup(popup_60be12732dabf7ce1a1df52df697e73c)
+        ;
+
+        
+    
+    
+            var circle_marker_43807538b12c0677f8923f8379de71ff = L.circleMarker(
+                [46.228251549999996, 6.1424633241700475],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_22b47b80e9ef856e6d1e9d44e7e7ddf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bab48a51a655c109b3a5647f97e83076 = $(`<div id="html_bab48a51a655c109b3a5647f97e83076" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: ishr international service for human rights<br>Emission in kg of CO2/year: 56.0</div>`)[0];
+                popup_22b47b80e9ef856e6d1e9d44e7e7ddf9.setContent(html_bab48a51a655c109b3a5647f97e83076);
+            
+        
+
+        circle_marker_43807538b12c0677f8923f8379de71ff.bindPopup(popup_22b47b80e9ef856e6d1e9d44e7e7ddf9)
+        ;
+
+        
+    
+    
+            var circle_marker_44ab92de5299ad90d86b4f0bcab87f38 = L.circleMarker(
+                [46.2286278, 6.1346858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_b0f588ea08a5a3b27dc111ac1654cbcc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2c54f50970c4f5d6c0cbfe479772121 = $(`<div id="html_d2c54f50970c4f5d6c0cbfe479772121" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: ilo international labour organization<br>Emission in kg of CO2/year: 3810.0</div>`)[0];
+                popup_b0f588ea08a5a3b27dc111ac1654cbcc.setContent(html_d2c54f50970c4f5d6c0cbfe479772121);
+            
+        
+
+        circle_marker_44ab92de5299ad90d86b4f0bcab87f38.bindPopup(popup_b0f588ea08a5a3b27dc111ac1654cbcc)
+        ;
+
+        
+    
+    
+            var circle_marker_0185c1f1d48931936a18d08e60d37052 = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_75359b971bde1151ed76e0c5bc807baf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd1f6b139db445665e198b3a2384e619 = $(`<div id="html_cd1f6b139db445665e198b3a2384e619" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: wmo world meteorological organization<br>Emission in kg of CO2/year: 1125.0</div>`)[0];
+                popup_75359b971bde1151ed76e0c5bc807baf.setContent(html_cd1f6b139db445665e198b3a2384e619);
+            
+        
+
+        circle_marker_0185c1f1d48931936a18d08e60d37052.bindPopup(popup_75359b971bde1151ed76e0c5bc807baf)
+        ;
+
+        
+    
+    
+            var circle_marker_8fa85d4397312f77090dacb7e7a00349 = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_672241947785fccc21bdbc2720189094 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04f37459bee7616c6abeee08302a630a = $(`<div id="html_04f37459bee7616c6abeee08302a630a" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: world intellectual property organization<br>Emission in kg of CO2/year: 2468.0</div>`)[0];
+                popup_672241947785fccc21bdbc2720189094.setContent(html_04f37459bee7616c6abeee08302a630a);
+            
+        
+
+        circle_marker_8fa85d4397312f77090dacb7e7a00349.bindPopup(popup_672241947785fccc21bdbc2720189094)
+        ;
+
+        
+    
+    
+            var circle_marker_e05135a5098e3c121864ac859702486d = L.circleMarker(
+                [46.23008, 6.12257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_bb8ea426ad8f4dcb3413c62c17fc1624 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ddafdbbc7715955b0f9da48a8a72644a = $(`<div id="html_ddafdbbc7715955b0f9da48a8a72644a" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of barbados<br>Emission in kg of CO2/year: 36.0</div>`)[0];
+                popup_bb8ea426ad8f4dcb3413c62c17fc1624.setContent(html_ddafdbbc7715955b0f9da48a8a72644a);
+            
+        
+
+        circle_marker_e05135a5098e3c121864ac859702486d.bindPopup(popup_bb8ea426ad8f4dcb3413c62c17fc1624)
+        ;
+
+        
+    
+    
+            var circle_marker_e69a065aa060315a113ea023fecdc9a2 = L.circleMarker(
+                [46.2303302, 6.1222181],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_2b567355c2fce9ec1e869b9fcadd85e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25937d01659361a35a16671fa958061d = $(`<div id="html_25937d01659361a35a16671fa958061d" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: permanent mission of the kingdom of morocco<br>Emission in kg of CO2/year: 45.0</div>`)[0];
+                popup_2b567355c2fce9ec1e869b9fcadd85e9.setContent(html_25937d01659361a35a16671fa958061d);
+            
+        
+
+        circle_marker_e69a065aa060315a113ea023fecdc9a2.bindPopup(popup_2b567355c2fce9ec1e869b9fcadd85e9)
+        ;
+
+        
+    
+    
+            var circle_marker_a1844ef1ea197b5cfed531ac51e8be19 = L.circleMarker(
+                [46.2330338, 6.0556926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5cdea456ebfa9306520edb743fa3637a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46d5b26e90d6be1c9678548b8c42a7d4 = $(`<div id="html_46d5b26e90d6be1c9678548b8c42a7d4" style="width: 100.0%; height: 100.0%;">Year: 2021<br>Organization: ebu european broadcasting union<br>Emission in kg of CO2/year: 715.0</div>`)[0];
+                popup_5cdea456ebfa9306520edb743fa3637a.setContent(html_46d5b26e90d6be1c9678548b8c42a7d4);
+            
+        
+
+        circle_marker_a1844ef1ea197b5cfed531ac51e8be19.bindPopup(popup_5cdea456ebfa9306520edb743fa3637a)
+        ;
+
+        
+    
+    
+            var heat_map_1a393e794711d9443a151edef84f75c1 = L.heatLayer(
+                [[46.2022496, 6.1416388, 89.5], [46.2022496, 6.1416388, 104.9], [46.21318, 6.11124, 42.0], [46.21326055326364, 6.147476023532721, 0.3], [46.21326055326364, 6.147476023532721, 45.0], [46.21326055326364, 6.147476023532721, 27.0], [46.2138171, 6.1460309, 36.6], [46.2138171, 6.1460309, 0.0], [46.2138171, 6.1460309, 18.0], [46.2138171, 6.1460309, 3595.3], [46.2156717, 6.1322563, 153.5], [46.2167065, 6.1480928, 22.5], [46.217619, 6.1481622, 4.6], [46.217619, 6.1481622, 40950.0], [46.217619, 6.1481622, 576.0], [46.21934176011838, 6.134093111889695, 77.0], [46.2197449, 6.1367197, 344.1], [46.2197449, 6.1367197, 74.4], [46.2200491, 6.143868, 1644.0], [46.2200491, 6.143868, 2287.8], [46.2200491, 6.143868, 57.5], [46.2200491, 6.143868, 16.6], [46.2200491, 6.143868, 4.4], [46.2205313, 6.1295725, 95.0], [46.22092633253714, 6.139227211889732, 242.70000000000002], [46.22092633253714, 6.139227211889732, 70.0], [46.22092633253714, 6.139227211889732, 1387.0], [46.2213651, 6.1395961, 79.0], [46.2213651, 6.1395961, 0.0], [46.2213651, 6.1395961, 102.30000000000001], [46.2218286, 6.137159, 24.5], [46.2224013, 6.1380736, 2579.4], [46.2225217, 6.130719, 50.0], [46.222618, 6.1329042, 102.0], [46.222618, 6.1329042, 175.4], [46.222618, 6.1329042, 0.0], [46.2232015, 6.1437187, 224.59999999999997], [46.2255721, 6.1311095, 93.5], [46.225705500000004, 6.140806439130429, 22.6], [46.225705500000004, 6.140806439130429, 48.0], [46.2259162, 6.1370571, 67.0], [46.2261633, 6.1239301, 249.10000000000002], [46.228251549999996, 6.1424633241700475, 66.2], [46.2286278, 6.1346858, 3828.2000000000003], [46.2299159, 6.1286488, 838.5], [46.2299159, 6.1286488, 2464.4], [46.23008, 6.12257, 29.5], [46.230210150000005, 6.144075209599858, 54.0], [46.2303302, 6.1222181, 28.1], [46.2330338, 6.0556926, 807.2]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 50}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+            var circle_marker_0d13711553594b914b04622a173ee92b = L.circleMarker(
+                [46.2022496, 6.1416388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_4c22a2c8c4fe222cfa8c7e800355d3c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7795c9d9b475bd6b2be2ca964824d1d = $(`<div id="html_f7795c9d9b475bd6b2be2ca964824d1d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: ccig chambre de commerce dindustrie et des services de geneve<br>Emission in kg of CO2/year: 89.5</div>`)[0];
+                popup_4c22a2c8c4fe222cfa8c7e800355d3c3.setContent(html_f7795c9d9b475bd6b2be2ca964824d1d);
+            
+        
+
+        circle_marker_0d13711553594b914b04622a173ee92b.bindPopup(popup_4c22a2c8c4fe222cfa8c7e800355d3c3)
+        ;
+
+        
+    
+    
+            var circle_marker_e05cff0599e5a6c4981b3f590bca3b76 = L.circleMarker(
+                [46.2022496, 6.1416388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_4fd8a92c364e998223f2048dd7c99ad7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfd4e2b5575b9e28a59d195ec06e03c8 = $(`<div id="html_cfd4e2b5575b9e28a59d195ec06e03c8" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: fipoi foundation for buildings for international organisations<br>Emission in kg of CO2/year: 104.9</div>`)[0];
+                popup_4fd8a92c364e998223f2048dd7c99ad7.setContent(html_cfd4e2b5575b9e28a59d195ec06e03c8);
+            
+        
+
+        circle_marker_e05cff0599e5a6c4981b3f590bca3b76.bindPopup(popup_4fd8a92c364e998223f2048dd7c99ad7)
+        ;
+
+        
+    
+    
+            var circle_marker_78046835c68f174a00a752fbc7a14dae = L.circleMarker(
+                [46.21318, 6.11124],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_fb626ec8a62a89a77fe388f46960108b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36997f4429a819c518b02bcebb2e8bea = $(`<div id="html_36997f4429a819c518b02bcebb2e8bea" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: united nations environment programme geneva office<br>Emission in kg of CO2/year: 42.0</div>`)[0];
+                popup_fb626ec8a62a89a77fe388f46960108b.setContent(html_36997f4429a819c518b02bcebb2e8bea);
+            
+        
+
+        circle_marker_78046835c68f174a00a752fbc7a14dae.bindPopup(popup_fb626ec8a62a89a77fe388f46960108b)
+        ;
+
+        
+    
+    
+            var circle_marker_42790cfd9d6c3341c0387b98ac17f16b = L.circleMarker(
+                [46.21326055326364, 6.147476023532721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_95f39712913f0d327bff5680c6b84907 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_078af47012c48966a6338c4db8b38596 = $(`<div id="html_078af47012c48966a6338c4db8b38596" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the principality of andorra<br>Emission in kg of CO2/year: 0.3</div>`)[0];
+                popup_95f39712913f0d327bff5680c6b84907.setContent(html_078af47012c48966a6338c4db8b38596);
+            
+        
+
+        circle_marker_42790cfd9d6c3341c0387b98ac17f16b.bindPopup(popup_95f39712913f0d327bff5680c6b84907)
+        ;
+
+        
+    
+    
+            var circle_marker_23ce994ef6871058b33d9ac39bf08953 = L.circleMarker(
+                [46.21326055326364, 6.147476023532721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_7182c0c6a52c1951e7aeddb3ce4e7133 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5acb2e27f32c75669b1b6f8b2ddbb7ea = $(`<div id="html_5acb2e27f32c75669b1b6f8b2ddbb7ea" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the principality of monaco<br>Emission in kg of CO2/year: 45.0</div>`)[0];
+                popup_7182c0c6a52c1951e7aeddb3ce4e7133.setContent(html_5acb2e27f32c75669b1b6f8b2ddbb7ea);
+            
+        
+
+        circle_marker_23ce994ef6871058b33d9ac39bf08953.bindPopup(popup_7182c0c6a52c1951e7aeddb3ce4e7133)
+        ;
+
+        
+    
+    
+            var circle_marker_924bec1339238b088222581903e80eef = L.circleMarker(
+                [46.21326055326364, 6.147476023532721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_84eb5f959a79c7397d6132b9bf6c81a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8772f3370134b8f012283bffa7358286 = $(`<div id="html_8772f3370134b8f012283bffa7358286" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the republic of slovenia<br>Emission in kg of CO2/year: 27.0</div>`)[0];
+                popup_84eb5f959a79c7397d6132b9bf6c81a8.setContent(html_8772f3370134b8f012283bffa7358286);
+            
+        
+
+        circle_marker_924bec1339238b088222581903e80eef.bindPopup(popup_84eb5f959a79c7397d6132b9bf6c81a8)
+        ;
+
+        
+    
+    
+            var circle_marker_1e6ea3f752c78514960445ddf58294d8 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_002812645162317d357d6fb5677f2ca4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d58752b0200e32c6d900a72bb3adbde8 = $(`<div id="html_d58752b0200e32c6d900a72bb3adbde8" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of norway 2<br>Emission in kg of CO2/year: 36.6</div>`)[0];
+                popup_002812645162317d357d6fb5677f2ca4.setContent(html_d58752b0200e32c6d900a72bb3adbde8);
+            
+        
+
+        circle_marker_1e6ea3f752c78514960445ddf58294d8.bindPopup(popup_002812645162317d357d6fb5677f2ca4)
+        ;
+
+        
+    
+    
+            var circle_marker_344ad1ae94dd4d861b70e7ad678304fd = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_3c5f2b6b119520c4088da9c26ee01d09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_305b1868ac05c4b808a47ad942b57f67 = $(`<div id="html_305b1868ac05c4b808a47ad942b57f67" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of portugal<br>Emission in kg of CO2/year: 0.0</div>`)[0];
+                popup_3c5f2b6b119520c4088da9c26ee01d09.setContent(html_305b1868ac05c4b808a47ad942b57f67);
+            
+        
+
+        circle_marker_344ad1ae94dd4d861b70e7ad678304fd.bindPopup(popup_3c5f2b6b119520c4088da9c26ee01d09)
+        ;
+
+        
+    
+    
+            var circle_marker_d3d489748c2c451498a14aeb4b648ba6 = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d0e4382939d7d9f26b999ceeae100d6a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c1ce530feab2acbd2571bce9025d7bf = $(`<div id="html_8c1ce530feab2acbd2571bce9025d7bf" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of tunisia<br>Emission in kg of CO2/year: 18.0</div>`)[0];
+                popup_d0e4382939d7d9f26b999ceeae100d6a.setContent(html_8c1ce530feab2acbd2571bce9025d7bf);
+            
+        
+
+        circle_marker_d3d489748c2c451498a14aeb4b648ba6.bindPopup(popup_d0e4382939d7d9f26b999ceeae100d6a)
+        ;
+
+        
+    
+    
+            var circle_marker_21d8408cba4df0e269703d3c9707896e = L.circleMarker(
+                [46.2138171, 6.1460309],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5cdfee74ce3653d8b45de4875317eaa2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9915fe95ca3d9cded7c98a4e2697c9f4 = $(`<div id="html_9915fe95ca3d9cded7c98a4e2697c9f4" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: who world health organization<br>Emission in kg of CO2/year: 3595.3</div>`)[0];
+                popup_5cdfee74ce3653d8b45de4875317eaa2.setContent(html_9915fe95ca3d9cded7c98a4e2697c9f4);
+            
+        
+
+        circle_marker_21d8408cba4df0e269703d3c9707896e.bindPopup(popup_5cdfee74ce3653d8b45de4875317eaa2)
+        ;
+
+        
+    
+    
+            var circle_marker_b6af6befdaedefbf55e763876459d58f = L.circleMarker(
+                [46.2156717, 6.1322563],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_32ed5c08adbcdf0e95c4224e21c39d35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32a28713b62b6c1244d6d54a0218997c = $(`<div id="html_32a28713b62b6c1244d6d54a0218997c" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent delegation of the european union<br>Emission in kg of CO2/year: 153.5</div>`)[0];
+                popup_32ed5c08adbcdf0e95c4224e21c39d35.setContent(html_32a28713b62b6c1244d6d54a0218997c);
+            
+        
+
+        circle_marker_b6af6befdaedefbf55e763876459d58f.bindPopup(popup_32ed5c08adbcdf0e95c4224e21c39d35)
+        ;
+
+        
+    
+    
+            var circle_marker_d88e1fa7bc22ebc61614a44ecfa469cf = L.circleMarker(
+                [46.2167065, 6.1480928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_596bb47aa26b09d752e295b61a9ab536 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa6589fa112217b282a2ac33c994a6a8 = $(`<div id="html_fa6589fa112217b282a2ac33c994a6a8" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the republic of rwanda<br>Emission in kg of CO2/year: 22.5</div>`)[0];
+                popup_596bb47aa26b09d752e295b61a9ab536.setContent(html_fa6589fa112217b282a2ac33c994a6a8);
+            
+        
+
+        circle_marker_d88e1fa7bc22ebc61614a44ecfa469cf.bindPopup(popup_596bb47aa26b09d752e295b61a9ab536)
+        ;
+
+        
+    
+    
+            var circle_marker_c81a67953ca286980286e3be836ee656 = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_50279ef9027482950d25ed039e63d6a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48d974b2af63ca878c19fe6d4de7d813 = $(`<div id="html_48d974b2af63ca878c19fe6d4de7d813" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: diplomatic club of geneva<br>Emission in kg of CO2/year: 4.6</div>`)[0];
+                popup_50279ef9027482950d25ed039e63d6a4.setContent(html_48d974b2af63ca878c19fe6d4de7d813);
+            
+        
+
+        circle_marker_c81a67953ca286980286e3be836ee656.bindPopup(popup_50279ef9027482950d25ed039e63d6a4)
+        ;
+
+        
+    
+    
+            var circle_marker_0109e41f5ff922e924c99ddc270a09f1 = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_73e69291c3fd59a1b821ca5196c73973 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8de49c57f9cdfcf09d49615882d01686 = $(`<div id="html_8de49c57f9cdfcf09d49615882d01686" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: unige university of geneva<br>Emission in kg of CO2/year: 40950.0</div>`)[0];
+                popup_73e69291c3fd59a1b821ca5196c73973.setContent(html_8de49c57f9cdfcf09d49615882d01686);
+            
+        
+
+        circle_marker_0109e41f5ff922e924c99ddc270a09f1.bindPopup(popup_73e69291c3fd59a1b821ca5196c73973)
+        ;
+
+        
+    
+    
+            var circle_marker_ce2b261a20d4d876ba280667e6bd7c86 = L.circleMarker(
+                [46.217619, 6.1481622],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_aee9edbd764fd87d71583d35ed64a5c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86a95272ed8c8f4ebb6cde3950ae3a5d = $(`<div id="html_86a95272ed8c8f4ebb6cde3950ae3a5d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: wcc world council of churches<br>Emission in kg of CO2/year: 576.0</div>`)[0];
+                popup_aee9edbd764fd87d71583d35ed64a5c6.setContent(html_86a95272ed8c8f4ebb6cde3950ae3a5d);
+            
+        
+
+        circle_marker_ce2b261a20d4d876ba280667e6bd7c86.bindPopup(popup_aee9edbd764fd87d71583d35ed64a5c6)
+        ;
+
+        
+    
+    
+            var circle_marker_3fe46c62f4c2885494faf99a0fbc4690 = L.circleMarker(
+                [46.21934176011838, 6.134093111889695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_6d275bc081bb6ef1e0a6ebc1087cfb1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2ab03b0aefe538b0ead8afcef193a2d = $(`<div id="html_d2ab03b0aefe538b0ead8afcef193a2d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: nrc norwegian refugee council geneva office idmc internal displacement monitoring centre<br>Emission in kg of CO2/year: 77.0</div>`)[0];
+                popup_6d275bc081bb6ef1e0a6ebc1087cfb1e.setContent(html_d2ab03b0aefe538b0ead8afcef193a2d);
+            
+        
+
+        circle_marker_3fe46c62f4c2885494faf99a0fbc4690.bindPopup(popup_6d275bc081bb6ef1e0a6ebc1087cfb1e)
+        ;
+
+        
+    
+    
+            var circle_marker_278b23d519716b0c66446306dd6309c1 = L.circleMarker(
+                [46.2197449, 6.1367197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_aa377a9bab9a67d6da0ecb613f8c7ee5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_222b5b923d3def122ad91b10c3e64940 = $(`<div id="html_222b5b923d3def122ad91b10c3e64940" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: dndi drugs for neglected diseases initiative<br>Emission in kg of CO2/year: 344.1</div>`)[0];
+                popup_aa377a9bab9a67d6da0ecb613f8c7ee5.setContent(html_222b5b923d3def122ad91b10c3e64940);
+            
+        
+
+        circle_marker_278b23d519716b0c66446306dd6309c1.bindPopup(popup_aa377a9bab9a67d6da0ecb613f8c7ee5)
+        ;
+
+        
+    
+    
+            var circle_marker_9d16fab11b0a43288642185cf70bbc0f = L.circleMarker(
+                [46.2197449, 6.1367197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_a8a9c82c7e73b99f53d556843e06763d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57f565d1069770a4da4f096655cbd51b = $(`<div id="html_57f565d1069770a4da4f096655cbd51b" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of mexico<br>Emission in kg of CO2/year: 74.4</div>`)[0];
+                popup_a8a9c82c7e73b99f53d556843e06763d.setContent(html_57f565d1069770a4da4f096655cbd51b);
+            
+        
+
+        circle_marker_9d16fab11b0a43288642185cf70bbc0f.bindPopup(popup_a8a9c82c7e73b99f53d556843e06763d)
+        ;
+
+        
+    
+    
+            var circle_marker_fc40f9403c3cc8cfecac16af55c3cc0c = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_7b1831a82a8cf115f795aa4af8f97b2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0698f484d4dd0927e78caed296a5fd1 = $(`<div id="html_e0698f484d4dd0927e78caed296a5fd1" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: ioc the international olympic committee<br>Emission in kg of CO2/year: 1644.0</div>`)[0];
+                popup_7b1831a82a8cf115f795aa4af8f97b2a.setContent(html_e0698f484d4dd0927e78caed296a5fd1);
+            
+        
+
+        circle_marker_fc40f9403c3cc8cfecac16af55c3cc0c.bindPopup(popup_7b1831a82a8cf115f795aa4af8f97b2a)
+        ;
+
+        
+    
+    
+            var circle_marker_550ccda62285ec063ef25558f21cf4c1 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_d56e3b2b6c78e383d76843a3298ae602 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4c6466cd3dbff2de49966b98288c351 = $(`<div id="html_d4c6466cd3dbff2de49966b98288c351" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: office of the united nations in geneva<br>Emission in kg of CO2/year: 2287.8</div>`)[0];
+                popup_d56e3b2b6c78e383d76843a3298ae602.setContent(html_d4c6466cd3dbff2de49966b98288c351);
+            
+        
+
+        circle_marker_550ccda62285ec063ef25558f21cf4c1.bindPopup(popup_d56e3b2b6c78e383d76843a3298ae602)
+        ;
+
+        
+    
+    
+            var circle_marker_a865dfec3fbee3817361dd68a85c9297 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_3477fb350521bbfe8f193195e2af77f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4492ea272a4f3f767ec70e0c810982d = $(`<div id="html_f4492ea272a4f3f767ec70e0c810982d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of finland<br>Emission in kg of CO2/year: 57.5</div>`)[0];
+                popup_3477fb350521bbfe8f193195e2af77f8.setContent(html_f4492ea272a4f3f767ec70e0c810982d);
+            
+        
+
+        circle_marker_a865dfec3fbee3817361dd68a85c9297.bindPopup(popup_3477fb350521bbfe8f193195e2af77f8)
+        ;
+
+        
+    
+    
+            var circle_marker_7a095441715d2a7fa669861ceeb70fed = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_37ff46ecde5bd811d35ea53fbd810f31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8afc073b53ca2eee0c149196b1cde3dc = $(`<div id="html_8afc073b53ca2eee0c149196b1cde3dc" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the fiji republic<br>Emission in kg of CO2/year: 16.6</div>`)[0];
+                popup_37ff46ecde5bd811d35ea53fbd810f31.setContent(html_8afc073b53ca2eee0c149196b1cde3dc);
+            
+        
+
+        circle_marker_7a095441715d2a7fa669861ceeb70fed.bindPopup(popup_37ff46ecde5bd811d35ea53fbd810f31)
+        ;
+
+        
+    
+    
+            var circle_marker_5ef0cd2595eee5ce5997a1720c196291 = L.circleMarker(
+                [46.2200491, 6.143868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5c12d7c94f1cf610d6421223f7baa12f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4721a406d5e43009c4d3398744bd5a1f = $(`<div id="html_4721a406d5e43009c4d3398744bd5a1f" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the republic of costa rica<br>Emission in kg of CO2/year: 4.4</div>`)[0];
+                popup_5c12d7c94f1cf610d6421223f7baa12f.setContent(html_4721a406d5e43009c4d3398744bd5a1f);
+            
+        
+
+        circle_marker_5ef0cd2595eee5ce5997a1720c196291.bindPopup(popup_5c12d7c94f1cf610d6421223f7baa12f)
+        ;
+
+        
+    
+    
+            var circle_marker_7cf54d544b3c30297e5c244fe87017f3 = L.circleMarker(
+                [46.2205313, 6.1295725],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_cded08e1c11a7a7cbc9b04798bcca2f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efaad3931ee135be0109e29538ceb169 = $(`<div id="html_efaad3931ee135be0109e29538ceb169" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of ireland<br>Emission in kg of CO2/year: 95.0</div>`)[0];
+                popup_cded08e1c11a7a7cbc9b04798bcca2f9.setContent(html_efaad3931ee135be0109e29538ceb169);
+            
+        
+
+        circle_marker_7cf54d544b3c30297e5c244fe87017f3.bindPopup(popup_cded08e1c11a7a7cbc9b04798bcca2f9)
+        ;
+
+        
+    
+    
+            var circle_marker_1ca84de32e22d18ae9cb0505f7ed3f9a = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_9642a8d7dad9ba9ded8beec677636a17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14143d5fe780285e027e36975e759edb = $(`<div id="html_14143d5fe780285e027e36975e759edb" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the federal republic of germany<br>Emission in kg of CO2/year: 242.70000000000002</div>`)[0];
+                popup_9642a8d7dad9ba9ded8beec677636a17.setContent(html_14143d5fe780285e027e36975e759edb);
+            
+        
+
+        circle_marker_1ca84de32e22d18ae9cb0505f7ed3f9a.bindPopup(popup_9642a8d7dad9ba9ded8beec677636a17)
+        ;
+
+        
+    
+    
+            var circle_marker_aca4ecf12655c48b2b27c347a2169915 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_f080e7ef1b9c72dd03dc8c1bc43f00a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ac1a0b7e9dc568455a4d5075ab2c352 = $(`<div id="html_1ac1a0b7e9dc568455a4d5075ab2c352" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the united kingdom of great britain and nothern ireland<br>Emission in kg of CO2/year: 70.0</div>`)[0];
+                popup_f080e7ef1b9c72dd03dc8c1bc43f00a1.setContent(html_1ac1a0b7e9dc568455a4d5075ab2c352);
+            
+        
+
+        circle_marker_aca4ecf12655c48b2b27c347a2169915.bindPopup(popup_f080e7ef1b9c72dd03dc8c1bc43f00a1)
+        ;
+
+        
+    
+    
+            var circle_marker_40186cf8109bb8a2a33e643d348e7ee4 = L.circleMarker(
+                [46.22092633253714, 6.139227211889732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5e1549394239d8ec9da73ac389b728d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46e93240303feae66159a7f2bf532550 = $(`<div id="html_46e93240303feae66159a7f2bf532550" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: un human rights office of the high commissioner for human rights<br>Emission in kg of CO2/year: 1387.0</div>`)[0];
+                popup_5e1549394239d8ec9da73ac389b728d5.setContent(html_46e93240303feae66159a7f2bf532550);
+            
+        
+
+        circle_marker_40186cf8109bb8a2a33e643d348e7ee4.bindPopup(popup_5e1549394239d8ec9da73ac389b728d5)
+        ;
+
+        
+    
+    
+            var circle_marker_01ddd283d5b0b9b40be6cf93020d7ea7 = L.circleMarker(
+                [46.2213651, 6.1395961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_f8f9f61c5c55af0732ce4f703f4a664c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_648f50809e5e1247a8f883a3dfebcd99 = $(`<div id="html_648f50809e5e1247a8f883a3dfebcd99" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: geneva call<br>Emission in kg of CO2/year: 79.0</div>`)[0];
+                popup_f8f9f61c5c55af0732ce4f703f4a664c.setContent(html_648f50809e5e1247a8f883a3dfebcd99);
+            
+        
+
+        circle_marker_01ddd283d5b0b9b40be6cf93020d7ea7.bindPopup(popup_f8f9f61c5c55af0732ce4f703f4a664c)
+        ;
+
+        
+    
+    
+            var circle_marker_0f35b01849dae345934b26c8de709038 = L.circleMarker(
+                [46.2213651, 6.1395961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_9af288167d58380fce36a8dd27d6c6e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff6cacf46a2919493c6313c465ec0c82 = $(`<div id="html_ff6cacf46a2919493c6313c465ec0c82" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: graduate institute geneva<br>Emission in kg of CO2/year: 0.0</div>`)[0];
+                popup_9af288167d58380fce36a8dd27d6c6e2.setContent(html_ff6cacf46a2919493c6313c465ec0c82);
+            
+        
+
+        circle_marker_0f35b01849dae345934b26c8de709038.bindPopup(popup_9af288167d58380fce36a8dd27d6c6e2)
+        ;
+
+        
+    
+    
+            var circle_marker_63cc87c18a2b6437110271782267509b = L.circleMarker(
+                [46.2213651, 6.1395961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_613b3bb4a2b57a527d03ff2004a1a180 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f48d15f8559e142def412fc12eae631 = $(`<div id="html_8f48d15f8559e142def412fc12eae631" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: undp office in geneva united nations development programme 2<br>Emission in kg of CO2/year: 102.30000000000001</div>`)[0];
+                popup_613b3bb4a2b57a527d03ff2004a1a180.setContent(html_8f48d15f8559e142def412fc12eae631);
+            
+        
+
+        circle_marker_63cc87c18a2b6437110271782267509b.bindPopup(popup_613b3bb4a2b57a527d03ff2004a1a180)
+        ;
+
+        
+    
+    
+            var circle_marker_eabb5201d3553622f7702b2b70c57b6a = L.circleMarker(
+                [46.2218286, 6.137159],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5a086ddefff931fe651c5b3c999327c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aef91420ed6e2a3e9e53be59992a7d23 = $(`<div id="html_aef91420ed6e2a3e9e53be59992a7d23" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: upov international union for the protection of new varieties of plants<br>Emission in kg of CO2/year: 24.5</div>`)[0];
+                popup_5a086ddefff931fe651c5b3c999327c9.setContent(html_aef91420ed6e2a3e9e53be59992a7d23);
+            
+        
+
+        circle_marker_eabb5201d3553622f7702b2b70c57b6a.bindPopup(popup_5a086ddefff931fe651c5b3c999327c9)
+        ;
+
+        
+    
+    
+            var circle_marker_a203b65faba722a10c267c92ed70e159 = L.circleMarker(
+                [46.2224013, 6.1380736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_73036e83c141b6e14ce500e006e06ddf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e19b4d894935b500ecf6771c0baa346 = $(`<div id="html_3e19b4d894935b500ecf6771c0baa346" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: itu international telecommunication union<br>Emission in kg of CO2/year: 2579.4</div>`)[0];
+                popup_73036e83c141b6e14ce500e006e06ddf.setContent(html_3e19b4d894935b500ecf6771c0baa346);
+            
+        
+
+        circle_marker_a203b65faba722a10c267c92ed70e159.bindPopup(popup_73036e83c141b6e14ce500e006e06ddf)
+        ;
+
+        
+    
+    
+            var circle_marker_1c13700ec0c131180cecbe532fa068bf = L.circleMarker(
+                [46.2225217, 6.130719],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_2d50a6481813da906239751aaeab8df0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_795c8d394a9497f2080c412574fa97a6 = $(`<div id="html_795c8d394a9497f2080c412574fa97a6" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of denmark<br>Emission in kg of CO2/year: 50.0</div>`)[0];
+                popup_2d50a6481813da906239751aaeab8df0.setContent(html_795c8d394a9497f2080c412574fa97a6);
+            
+        
+
+        circle_marker_1c13700ec0c131180cecbe532fa068bf.bindPopup(popup_2d50a6481813da906239751aaeab8df0)
+        ;
+
+        
+    
+    
+            var circle_marker_f29d3ccc68f68c2d7c0dd9ddcdc7402d = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_f0dfe62df5d846d1193a64d4a2f0da9c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c418428845544f5fa035160bfde6772d = $(`<div id="html_c418428845544f5fa035160bfde6772d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of chile<br>Emission in kg of CO2/year: 102.0</div>`)[0];
+                popup_f0dfe62df5d846d1193a64d4a2f0da9c.setContent(html_c418428845544f5fa035160bfde6772d);
+            
+        
+
+        circle_marker_f29d3ccc68f68c2d7c0dd9ddcdc7402d.bindPopup(popup_f0dfe62df5d846d1193a64d4a2f0da9c)
+        ;
+
+        
+    
+    
+            var circle_marker_2003923b81a14f81a854be1f5ead9135 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5672cecdc92067086552bd9266f97bbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c73d582c18586a926f64015efba06858 = $(`<div id="html_c73d582c18586a926f64015efba06858" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of france<br>Emission in kg of CO2/year: 175.4</div>`)[0];
+                popup_5672cecdc92067086552bd9266f97bbb.setContent(html_c73d582c18586a926f64015efba06858);
+            
+        
+
+        circle_marker_2003923b81a14f81a854be1f5ead9135.bindPopup(popup_5672cecdc92067086552bd9266f97bbb)
+        ;
+
+        
+    
+    
+            var circle_marker_75cbb9e0af7fa8c8327b0a9671bf9060 = L.circleMarker(
+                [46.222618, 6.1329042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_60113181959a2ee5983c7b0a0842e971 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfc1b253705d6dc5e1c5858cd8de9563 = $(`<div id="html_bfc1b253705d6dc5e1c5858cd8de9563" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: unhcr the un refugee agency<br>Emission in kg of CO2/year: 0.0</div>`)[0];
+                popup_60113181959a2ee5983c7b0a0842e971.setContent(html_bfc1b253705d6dc5e1c5858cd8de9563);
+            
+        
+
+        circle_marker_75cbb9e0af7fa8c8327b0a9671bf9060.bindPopup(popup_60113181959a2ee5983c7b0a0842e971)
+        ;
+
+        
+    
+    
+            var circle_marker_64a232ae93a62a8a95090a7b72a7d190 = L.circleMarker(
+                [46.2232015, 6.1437187],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_88dc9af499e71147b1a723c3dccfd6d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4d43c2e615ccc6f80e2ae678b49c055 = $(`<div id="html_d4d43c2e615ccc6f80e2ae678b49c055" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: gichd geneva international centre for humanitarian demining<br>Emission in kg of CO2/year: 224.59999999999997</div>`)[0];
+                popup_88dc9af499e71147b1a723c3dccfd6d3.setContent(html_d4d43c2e615ccc6f80e2ae678b49c055);
+            
+        
+
+        circle_marker_64a232ae93a62a8a95090a7b72a7d190.bindPopup(popup_88dc9af499e71147b1a723c3dccfd6d3)
+        ;
+
+        
+    
+    
+            var circle_marker_f02c998952e61803e3f6f80ea277f343 = L.circleMarker(
+                [46.2255721, 6.1311095],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_47edd6bd005179d66d53f59e0632a3e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24cd447d35cda33c2ef72559a80ec4ec = $(`<div id="html_24cd447d35cda33c2ef72559a80ec4ec" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of norway<br>Emission in kg of CO2/year: 93.5</div>`)[0];
+                popup_47edd6bd005179d66d53f59e0632a3e5.setContent(html_24cd447d35cda33c2ef72559a80ec4ec);
+            
+        
+
+        circle_marker_f02c998952e61803e3f6f80ea277f343.bindPopup(popup_47edd6bd005179d66d53f59e0632a3e5)
+        ;
+
+        
+    
+    
+            var circle_marker_f135b72bfb9e28694936584a5f309b9e = L.circleMarker(
+                [46.225705500000004, 6.140806439130429],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_35c1421e9f9ca4069f2689bf44739c86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f8f6d834c66ca097b3002da1aa9464d = $(`<div id="html_9f8f6d834c66ca097b3002da1aa9464d" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: icva international council of voluntary agencies<br>Emission in kg of CO2/year: 22.6</div>`)[0];
+                popup_35c1421e9f9ca4069f2689bf44739c86.setContent(html_9f8f6d834c66ca097b3002da1aa9464d);
+            
+        
+
+        circle_marker_f135b72bfb9e28694936584a5f309b9e.bindPopup(popup_35c1421e9f9ca4069f2689bf44739c86)
+        ;
+
+        
+    
+    
+            var circle_marker_4c420c9ee908c3c820e827b4fc3bfa6f = L.circleMarker(
+                [46.225705500000004, 6.140806439130429],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_610c62447425fc16791b4b620fda6262 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83c2e0cb99c86c9f2e451d959fd9d36c = $(`<div id="html_83c2e0cb99c86c9f2e451d959fd9d36c" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: path foundation for appropriate technologies in health<br>Emission in kg of CO2/year: 48.0</div>`)[0];
+                popup_610c62447425fc16791b4b620fda6262.setContent(html_83c2e0cb99c86c9f2e451d959fd9d36c);
+            
+        
+
+        circle_marker_4c420c9ee908c3c820e827b4fc3bfa6f.bindPopup(popup_610c62447425fc16791b4b620fda6262)
+        ;
+
+        
+    
+    
+            var circle_marker_c5f19459ca2585bc7397fa3a2b3204e7 = L.circleMarker(
+                [46.2259162, 6.1370571],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_135aa86275f85697e53215920d80d43c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cbdcf5cc44eae7ef5456f5cdecf4c72 = $(`<div id="html_3cbdcf5cc44eae7ef5456f5cdecf4c72" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of israel<br>Emission in kg of CO2/year: 67.0</div>`)[0];
+                popup_135aa86275f85697e53215920d80d43c.setContent(html_3cbdcf5cc44eae7ef5456f5cdecf4c72);
+            
+        
+
+        circle_marker_c5f19459ca2585bc7397fa3a2b3204e7.bindPopup(popup_135aa86275f85697e53215920d80d43c)
+        ;
+
+        
+    
+    
+            var circle_marker_4ecaf603a4136cf8a51453febe6c3c9c = L.circleMarker(
+                [46.2261633, 6.1239301],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e388ed2ebeacfb528d4a59bf978e210d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11acc89d3cd82f2a8cce58a21aa390ce = $(`<div id="html_11acc89d3cd82f2a8cce58a21aa390ce" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of switzerland<br>Emission in kg of CO2/year: 249.10000000000002</div>`)[0];
+                popup_e388ed2ebeacfb528d4a59bf978e210d.setContent(html_11acc89d3cd82f2a8cce58a21aa390ce);
+            
+        
+
+        circle_marker_4ecaf603a4136cf8a51453febe6c3c9c.bindPopup(popup_e388ed2ebeacfb528d4a59bf978e210d)
+        ;
+
+        
+    
+    
+            var circle_marker_7c084cf9adb944d4c8ea738795a068be = L.circleMarker(
+                [46.228251549999996, 6.1424633241700475],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_ec92415f333f6a3e0a21f5efb644b484 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_daa7dfaf6ef881b923b22bb6c8bbcf0e = $(`<div id="html_daa7dfaf6ef881b923b22bb6c8bbcf0e" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: ishr international service for human rights<br>Emission in kg of CO2/year: 66.2</div>`)[0];
+                popup_ec92415f333f6a3e0a21f5efb644b484.setContent(html_daa7dfaf6ef881b923b22bb6c8bbcf0e);
+            
+        
+
+        circle_marker_7c084cf9adb944d4c8ea738795a068be.bindPopup(popup_ec92415f333f6a3e0a21f5efb644b484)
+        ;
+
+        
+    
+    
+            var circle_marker_59a83e4f73ecec3893a560a88785aa92 = L.circleMarker(
+                [46.2286278, 6.1346858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_216ea079f49de120b143f724b466f9b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96ff6107a64426993d189adb63926583 = $(`<div id="html_96ff6107a64426993d189adb63926583" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: ilo international labour organization<br>Emission in kg of CO2/year: 3828.2000000000003</div>`)[0];
+                popup_216ea079f49de120b143f724b466f9b7.setContent(html_96ff6107a64426993d189adb63926583);
+            
+        
+
+        circle_marker_59a83e4f73ecec3893a560a88785aa92.bindPopup(popup_216ea079f49de120b143f724b466f9b7)
+        ;
+
+        
+    
+    
+            var circle_marker_c258c56127f0805f24db486632c0d037 = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_5fcf515f1093db8a98b7a3b1a65b4fe9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b12fe78b55b03460db38f891fa64631 = $(`<div id="html_5b12fe78b55b03460db38f891fa64631" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: wmo world meteorological organization<br>Emission in kg of CO2/year: 838.5</div>`)[0];
+                popup_5fcf515f1093db8a98b7a3b1a65b4fe9.setContent(html_5b12fe78b55b03460db38f891fa64631);
+            
+        
+
+        circle_marker_c258c56127f0805f24db486632c0d037.bindPopup(popup_5fcf515f1093db8a98b7a3b1a65b4fe9)
+        ;
+
+        
+    
+    
+            var circle_marker_7745aa20ce464a9f9e5104115cdd249b = L.circleMarker(
+                [46.2299159, 6.1286488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e7c04464420cd1e7a55e18a3e2364b69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eeb2f23310dbe7aad18925584ba08b1e = $(`<div id="html_eeb2f23310dbe7aad18925584ba08b1e" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: world intellectual property organization<br>Emission in kg of CO2/year: 2464.4</div>`)[0];
+                popup_e7c04464420cd1e7a55e18a3e2364b69.setContent(html_eeb2f23310dbe7aad18925584ba08b1e);
+            
+        
+
+        circle_marker_7745aa20ce464a9f9e5104115cdd249b.bindPopup(popup_e7c04464420cd1e7a55e18a3e2364b69)
+        ;
+
+        
+    
+    
+            var circle_marker_04fb679fcd8cd7f12d8ded55f219065f = L.circleMarker(
+                [46.23008, 6.12257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_dc8ec975bec82f12da06537b98b5ff8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce80dd132b7b22417fa0053b51d5cc24 = $(`<div id="html_ce80dd132b7b22417fa0053b51d5cc24" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of barbados<br>Emission in kg of CO2/year: 29.5</div>`)[0];
+                popup_dc8ec975bec82f12da06537b98b5ff8d.setContent(html_ce80dd132b7b22417fa0053b51d5cc24);
+            
+        
+
+        circle_marker_04fb679fcd8cd7f12d8ded55f219065f.bindPopup(popup_dc8ec975bec82f12da06537b98b5ff8d)
+        ;
+
+        
+    
+    
+            var circle_marker_5992ccc6a27f9584f22bdc10674df73c = L.circleMarker(
+                [46.230210150000005, 6.144075209599858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_a24e1ff149c17d219aef65c86b9e1169 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58b750345714b189d5ec2d0b22b88517 = $(`<div id="html_58b750345714b189d5ec2d0b22b88517" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of italy<br>Emission in kg of CO2/year: 54.0</div>`)[0];
+                popup_a24e1ff149c17d219aef65c86b9e1169.setContent(html_58b750345714b189d5ec2d0b22b88517);
+            
+        
+
+        circle_marker_5992ccc6a27f9584f22bdc10674df73c.bindPopup(popup_a24e1ff149c17d219aef65c86b9e1169)
+        ;
+
+        
+    
+    
+            var circle_marker_eb7be8049e3e190d63667a05bf10f6f3 = L.circleMarker(
+                [46.2303302, 6.1222181],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_e78bd7e317ecd3dfd49ed5d18b4d20b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85ef121d290914e162f69ae3c3dad0fb = $(`<div id="html_85ef121d290914e162f69ae3c3dad0fb" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: permanent mission of the kingdom of morocco<br>Emission in kg of CO2/year: 28.1</div>`)[0];
+                popup_e78bd7e317ecd3dfd49ed5d18b4d20b9.setContent(html_85ef121d290914e162f69ae3c3dad0fb);
+            
+        
+
+        circle_marker_eb7be8049e3e190d63667a05bf10f6f3.bindPopup(popup_e78bd7e317ecd3dfd49ed5d18b4d20b9)
+        ;
+
+        
+    
+    
+            var circle_marker_06fca5f44d81128d3d7de633e30253ae = L.circleMarker(
+                [46.2330338, 6.0556926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+    
+        var popup_190434d0665eba3ee36cfcc0118adbfb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a48e1cc318c5b24c7a6f0585dff66b0 = $(`<div id="html_0a48e1cc318c5b24c7a6f0585dff66b0" style="width: 100.0%; height: 100.0%;">Year: 2022<br>Organization: ebu european broadcasting union<br>Emission in kg of CO2/year: 807.2</div>`)[0];
+                popup_190434d0665eba3ee36cfcc0118adbfb.setContent(html_0a48e1cc318c5b24c7a6f0585dff66b0);
+            
+        
+
+        circle_marker_06fca5f44d81128d3d7de633e30253ae.bindPopup(popup_190434d0665eba3ee36cfcc0118adbfb)
+        ;
+
+        
+    
+    
+            var layer_control_46ac4ddc6750a9f86d75f45f8c451a9f = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1529bc4d733c4232bf3f25f1c7673cbb,
+                },
+                overlays :  {
+                    "2020" : heat_map_608a104c38b9de2913c510a72b6c331c,
+                    "2021" : heat_map_418f5489f3832d1d7ad47354d1f98be9,
+                    "2022" : heat_map_1a393e794711d9443a151edef84f75c1,
+                },
+            };
+            L.control.layers(
+                layer_control_46ac4ddc6750a9f86d75f45f8c451a9f.base_layers,
+                layer_control_46ac4ddc6750a9f86d75f45f8c451a9f.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_cc177190576906daaede6276b967ca26);
+        
+</script>
+</html>
